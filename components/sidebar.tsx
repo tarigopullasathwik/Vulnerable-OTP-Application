@@ -13,6 +13,7 @@ import {
   Gauge,
   Network,
   Info,
+  ClipboardCheck,
   Menu,
   X,
 } from "lucide-react"
@@ -24,6 +25,7 @@ const nav = [
   { href: "/otp-lab", label: "OTP Lab", icon: KeyRound },
   { href: "/attack-simulation", label: "Attack Simulation", icon: Crosshair },
   { href: "/vulnerability-report", label: "Vulnerability Report", icon: FileWarning },
+  { href: "/report", label: "Export Report", icon: ClipboardCheck },
   { href: "/remediation", label: "Remediation", icon: ListChecks },
   { href: "/security-score", label: "Security Score", icon: Gauge },
   { href: "/architecture", label: "Architecture", icon: Network },

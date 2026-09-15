@@ -88,7 +88,21 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-5xl gap-4 px-6 pb-24 sm:grid-cols-2 lg:grid-cols-3">
+        <section aria-label="Platform highlights" className="mx-auto grid max-w-5xl grid-cols-2 gap-px overflow-hidden border border-border bg-border sm:grid-cols-4">
+          {[
+            ["08", "guided modules"],
+            ["04", "CWE-mapped findings"],
+            ["03", "attack paths"],
+            ["100%", "simulated and safe"],
+          ].map(([value, label]) => (
+            <div key={label} className="bg-card px-4 py-5 text-center sm:px-5">
+              <p className="font-mono text-xl font-semibold text-primary">{value}</p>
+              <p className="mt-1 text-[10px] uppercase tracking-widest text-muted-foreground">{label}</p>
+            </div>
+          ))}
+        </section>
+
+        <section className="mx-auto grid max-w-5xl gap-4 px-6 py-16 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => {
             const Icon = feature.icon
             return (
